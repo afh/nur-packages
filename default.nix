@@ -22,4 +22,6 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   bttf = pkgs.callPackage ./pkgs/bttf { };
+
+  simplelogin-cli = pkgs.callPackage ./pkgs/simplelogin-cli { };
 }
