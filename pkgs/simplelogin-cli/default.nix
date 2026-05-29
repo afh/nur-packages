@@ -29,12 +29,17 @@ buildGoModule (finalAttrs: {
     "-X=main.date=1970-01-01T00:00:00Z"
   ];
 
+  subPackages = [ "." ];
+
   nativeBuildInputs = [
     installShellFiles
   ];
 
+  preBuild = ''
+    go run ./cmd/gen-man
+  '';
+
   postInstall = ''
-    $out/bin/gen-man && rm $out/bin/gen-man
     installManPage man/*.[1-9]
   '';
 
