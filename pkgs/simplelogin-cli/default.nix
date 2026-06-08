@@ -7,7 +7,7 @@
 
 buildGoModule (finalAttrs: {
   pname = "simplelogin-cli";
-  version = "0.3.0";
+  version = "0.4.0";
 
   __structuredAttrs = true;
   __darwinAllowLocalNetworking = true;
@@ -16,10 +16,11 @@ buildGoModule (finalAttrs: {
     owner = "mexcool";
     repo = "simplelogin-cli";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-xArmFEBxigd7/iPp4gaQ6iU3jyKbvSf3NpIl4XcYiQ0=";
+    hash = "sha256-Gs3hOoRBzDXXbRgs0Pykobxlzt1qbFzsIjQpcIoo6iE=";
   };
 
-  vendorHash = "sha256-P0+WT/1HKxSLmfDaIeQ8JThPbBuaf59rZjJjxuI+lzg=";
+  vendorHash = "sha256-6skLoiAeVRJQgmcB0v/OXxrMBMJBVKsiOsXDIYJU+Lg=";
+  proxyVendor = true;
 
   ldflags = [
     "-s"
